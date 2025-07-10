@@ -87,7 +87,7 @@
         <span id="weather-icon" class="weather-icon">
           <i id="weather-icon-main" class="fa-solid fa-cloud weather-icon-main"></i>
           <i id="heat-waves" class="fa-solid fa-water heat-waves" style="display: none;"></i>
-          <img id="wind-waves" class="wind-waves" style="display: none; width: 16px; height: 16px; filter: drop-shadow(-1px -1px 0 #000) drop-shadow(1px -1px 0 #000) drop-shadow(-1px 1px 0 #000) drop-shadow(1px 1px 0 #000) drop-shadow(0 0 2px #000);" alt="Windy" />
+          <img id="wind-waves" class="wind-waves" style="display: none; width: 16px; height: 16px; filter: drop-shadow(-1px -1px 0 #000) drop-shadow(1px -1px 0 #000) drop-shadow(-1px 1px 0 #000) drop-shadow(1px 1px 0 #000) drop-shadow(0 0 4px #000); image-rendering: optimizeQuality;" alt="Windy" />
         </span>
       </span>
       <span id="weather">--°C</span>
@@ -934,7 +934,7 @@
       // Create new image element and preload it
       const imgElement = document.createElement('img');
       imgElement.alt = desc;
-      imgElement.style.cssText = 'width: 24px; height: 24px; filter: drop-shadow(-1px -1px 0 #000) drop-shadow(1px -1px 0 #000) drop-shadow(-1px 1px 0 #000) drop-shadow(1px 1px 0 #000) drop-shadow(0 0 2px #000); image-rendering: crisp-edges;';
+      imgElement.style.cssText = 'width: 24px; height: 24px; filter: drop-shadow(-1px -1px 0 #000) drop-shadow(1px -1px 0 #000) drop-shadow(-1px 1px 0 #000) drop-shadow(1px 1px 0 #000) drop-shadow(0 0 4px #000); image-rendering: optimizeQuality;';
       
       // Add error handler for fallback to standard Google icons
       imgElement.onerror = function() {
@@ -1078,7 +1078,7 @@
         // Create new image element for cached data
         const imgElement = document.createElement('img');
         imgElement.alt = cached.description;
-        imgElement.style.cssText = 'width: 24px; height: 24px; filter: drop-shadow(-1px -1px 0 #000) drop-shadow(1px -1px 0 #000) drop-shadow(-1px 1px 0 #000) drop-shadow(1px 1px 0 #000) drop-shadow(0 0 2px #000); image-rendering: crisp-edges;';
+        imgElement.style.cssText = 'width: 24px; height: 24px; filter: drop-shadow(-1px -1px 0 #000) drop-shadow(1px -1px 0 #000) drop-shadow(-1px 1px 0 #000) drop-shadow(1px 1px 0 #000) drop-shadow(0 0 4px #000); image-rendering: optimizeQuality;';
         imgElement.src = iconUrls.primary;
         imgElement.onerror = function() { this.src = iconUrls.fallback; };
         
